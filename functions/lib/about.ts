@@ -78,6 +78,6 @@ export async function getUrns(env: Env, tokenId: string = "0") {
   // map urns
   return entities.map(
     (entity) =>
-      `urn:decentraland:entity:${entity.hash}?=&baseUrl=https://BagsWorlds.dcl.eth/api/contents/`
+      `urn:decentraland:entity:${entity.hash}?=&baseUrl=https://bagworlds.com/api/contents/`
   );
 }
