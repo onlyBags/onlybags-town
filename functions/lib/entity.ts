@@ -6,7 +6,7 @@ import { Path, getContentPath, getMutableHash } from "./mappings";
 import { createScene } from "./scene";
 import { Env } from "./env";
 import { reduceCoords } from "./coords";
-import { getAuctionHouse, getClient } from "./contracts";
+//import { getAuctionHouse, getClient } from "./contracts";
 
 export type Entity = {
   id: string;
@@ -137,12 +137,9 @@ export async function getEntityMappings(
   Record<string, { hash: string; x: number; y: number; tokenId: string }>
 > {
   // get max token id from auction house
-  const client = getClient(env);
-  const auctionHouse = getAuctionHouse(env);
-  const [maxTokenId] = await client.readContract({
-    ...auctionHouse,
-    functionName: "auction",
-  });
+  // const client = getClient(env);
+  // const auctionHouse = getAuctionHouse(env);
+  const maxTokenId = 1;
 
   // load cached entities
   let entities: Record<
