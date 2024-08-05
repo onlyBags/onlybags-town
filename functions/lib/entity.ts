@@ -139,7 +139,7 @@ export async function getEntityMappings(
   // get max token id from auction house
   // const client = getClient(env);
   // const auctionHouse = getAuctionHouse(env);
-  const maxTokenId = 1;
+  const maxTokenId = 2;
 
   // load cached entities
   let entities: Record<
