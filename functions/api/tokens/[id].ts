@@ -9,14 +9,13 @@ import { toLayout } from "../../lib/layout";
 export const onRequestGet: PagesFunction<Env, "id"> = async (context) => {
   const tokenId = context.params.id as string;
   const [x, y] = toCoords(tokenId);
-  const { base } = toLayout(tokenId);
   const name = `${x},${y}`;
   const result = {
     id: context.params.id,
     name,
-    description: `Parcel ${name} at Exodus Town`,
-    image: `https://exodus.town/api/tokens/${tokenId}/image`,
-    external_url: `https://decentraland.org/play?realm=exodus.town&position=${base.x},${base.y}`,
+    description: `Parcel ${name} at BAGs Worlds`,
+    image: `https://bagworlds.com/api/tokens/${tokenId}/image`,
+    external_url: `https://decentraland.org/play?realm=bagworlds.com/${tokenId}`,
     attributes: [
       { trait_type: "X", value: x, display_type: "number" },
       { trait_type: "Y", value: y, display_type: "number" },

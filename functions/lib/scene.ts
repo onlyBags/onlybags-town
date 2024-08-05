@@ -9,7 +9,7 @@ export function createScene(tokenId: string) {
     runtimeVersion: "7",
     display: {
       title: `Parcel ${x},${y}`,
-      description: `Parcel ${x},${y} on Exodus Town`,
+      description: `Parcel ${x},${y} on Bags Worlds`,
       navmapThumbnail: "thumbnail.png",
     },
     scene: {

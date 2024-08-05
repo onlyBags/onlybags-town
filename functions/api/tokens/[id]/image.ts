@@ -79,10 +79,11 @@ export const onRequestGet: PagesFunction<Env, "id"> = async (context) => {
     }
   }
 
+
   const svg = `
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${width}px" height="${height}px" version="1.1">
-    <title>Exodus Town</title>
-    <desc>Parcel ${centerX},${centerY} of Exodus Town</desc>
+    <title>BAGS World</title>
+    <desc>Parcel ${centerX},${centerY} of BAGS World</desc>
     <rect width="${width}" height="${height}" fill="#000000"/>
     ${tiles.join("\n")}
 </svg>

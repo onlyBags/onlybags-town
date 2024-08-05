@@ -39,14 +39,14 @@ export function getAbout(): About {
     configurations: {
       networkId: 1,
       globalScenesUrn: [],
-      cityLoaderContentServer: "https://exodus.town/api",
+      cityLoaderContentServer: "https://bagworlds.com/api",
       minimap: {
         enabled: false,
       },
       skybox: {
         fixedHour: 36000,
       },
-      realmName: "exodus.town",
+      realmName: "bagworlds.com",
     },
     content: {
       healthy: true,
@@ -60,7 +60,7 @@ export function getAbout(): About {
       healthy: true,
       protocol: "v3",
       fixedAdapter:
-        "signed-login:https://worlds-content-server.decentraland.org/get-comms-adapter/world-prd-exodustown.dcl.eth",
+        "signed-login:https://worlds-content-server.decentraland.org/get-comms-adapter/world-prd-BagsWorlds.dcl.eth",
     },
   };
 }
@@ -78,6 +78,6 @@ export async function getUrns(env: Env, tokenId: string = "0") {
   // map urns
   return entities.map(
     (entity) =>
-      `urn:decentraland:entity:${entity.hash}?=&baseUrl=https://exodus.town/api/contents/`
+      `urn:decentraland:entity:${entity.hash}?=&baseUrl=https://BagsWorlds.dcl.eth/api/contents/`
   );
 }

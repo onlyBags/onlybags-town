@@ -130,14 +130,14 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
   if (tokenIds.length === 0) {
     return error(
-      `Could not map the scene.json parcels to a valid Exodus Town token`,
+      `Could not map the scene.json parcels to a valid BagWorlds token`,
       400
     );
   }
 
   if (tokenIds.length > 1) {
     return error(
-      `You are trying to deploy to multiple Exodus Town parcels: ${tokenIds
+      `You are trying to deploy to multiple BagWorlds parcels: ${tokenIds
         .map((tokenId) => `"${toCoords(tokenId).join(",")}"`)
         .join(", ")}`,
       400
@@ -160,7 +160,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
   if (owner !== address) {
     return error(
-      `The owner of the Exodus Town parcel "${toCoords(
+      `The owner of the BagWorlds parcel "${toCoords(
         tokenId
       )}" is "${owner}" and the address of the deployer is "${address}"`,
       401
@@ -172,7 +172,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   const expectedBase = toId(layout.base.x, layout.base.y);
   if (base !== toId(layout.base.x, layout.base.y)) {
     return error(
-      `The expected base for the Exodus Town parcel "${toCoords(
+      `The expected base for the BagWorlds parcel "${toCoords(
         tokenId
       )}" should be "${expectedBase}" and it is "${base}"`,
       400
@@ -246,7 +246,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   console.log(`done!`);
 
   return json({
-    message: `Your scene was successfully deployed to Exodus Town in parcel "${toCoords(
+    message: `Your scene was successfully deployed to BagWorlds in parcel "${toCoords(
       tokenId
     ).join(",")}"`,
   });

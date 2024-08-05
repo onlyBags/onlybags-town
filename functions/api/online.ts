@@ -4,7 +4,7 @@ import { error, json } from "../lib/response";
 export const onRequest: PagesFunction<Env> = async () => {
   try {
     const resp = await fetch(
-      "https://places.decentraland.org/api/worlds?names=exodustown.dcl.eth&offset=0&limit=1"
+      "https://places.decentraland.org/api/worlds?names=BagsWorlds.dcl.eth&offset=0&limit=1"
     );
     if (resp.ok) {
       const data = await resp.json<{ data: { user_count: number }[] }>();
