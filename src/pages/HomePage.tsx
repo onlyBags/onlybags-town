@@ -4,7 +4,6 @@ import { SlMagnifier } from "react-icons/sl";
 import { IoMdWarning, IoMdLogIn } from "react-icons/io";
 import { FaDiscord } from "react-icons/fa";
 import { Navbar } from "../components/Navbar";
-import { Auction } from "../components/Auction";
 import { Tiles } from "../components/Tiles";
 import { Accordion } from "../components/Accordion";
 import { useAuction } from "../modules/auction";
@@ -37,7 +36,7 @@ export const HomePage = memo(() => {
       <Tiles tokenId={tokenId} setTokenId={setTokenId} />
       <div className="HomePage dcl page">
         <Container className="content">
-          <Auction tokenId={tokenId} setTokenId={setTokenId} />
+         
           <div className="content">
             <div className="welcome">
               <h1 className="title">
