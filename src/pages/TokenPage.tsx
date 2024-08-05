@@ -13,7 +13,7 @@ export const TokenPage = memo(() => {
   const { isOwner } = useToken(tokenId);
   const { signedMessage, isSigningMessage, signMessage } = useAuth();
   const [showResetModal, setShowResetModal] = useState(false);
-
+debugger;
   return (
     <div className="TokenPage">
       <Topbar
